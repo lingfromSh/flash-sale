@@ -6,7 +6,7 @@ use crate::model::consumer::r#in::{ConsumerRegisterInputModel, ConsumerLoginInpu
 #[put("/")]
 async fn modify_info(new_info: web::Json<ModifyConsumerInfoInputModel>) -> Result<HttpResponse>{
 	println!("New consumer info: {:?}", new_info);
-	let modified = ConsumerBasicModel::new(0, None, None, None, None);
+	let modified = ConsumerBasicModel::new(0, new_info.nickname.clone(), new_info.gender.clone(), new_info.age.clone(), new_info.logo.clone());
 	Ok(HttpResponse::Ok().json(modified))
 }
 
