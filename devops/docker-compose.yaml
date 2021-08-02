@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  flash-sale-container-mongodb:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: passwd
+
+  flash-sale-container-mongodb-admin:
+    image: mongo-express:latest
+    restart: always
+    ports:  
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: flash-sale-container-mongodb
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: passwd
+    depends_on:
+      - flash-sale-container-mongodb
+
