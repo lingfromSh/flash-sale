@@ -1,13 +1,18 @@
 --- ✄ Init Project -----------------------
- ☐ set dependencies
+ ✔ set dependencies @done (21-08-01 10:51)
    ✔ actix-web <3> @done (21-07-31 22:28)
    ✔ serde <1> @done (21-07-31 23:42)
    ✔ serde_json <1> @done (21-07-31 23:42)
+   ✔ mongodb @done (21-08-01 10:51)
+     ✔ config async runtime @done (21-08-01 10:52)
+ ✔ add devops @done (21-08-01 10:51)
+   ✔ add mongodb @done (21-08-01 10:51)
+   ✔ add mongo-express @done (21-08-01 10:51)
 
 --- ✄ Add jwt token-----------------------
  ☐ jwt token
  
----- ✄ Add services-----------------------
+--- ✄ Add services-----------------------
  ✔ Default api @done (21-07-31 22:43)
  ✔ Consumer @done (21-07-31 22:46)
    ☐ Login
@@ -15,3 +20,6 @@
    ☐ Update info
    ☐ Change password
    ☐ Reset password
+
+--- ✄ Add database -----------------------
+ ✔ Mongodb @done (21-08-02 15:22)
